@@ -1,0 +1,99 @@
+1.PythagoreanTheorem.py
+
+import math
+print ("This is PythagoreanTheorem.py")
+print ("Please input the length of two side of the triangle ")
+length_a = input("enter length_a")
+length_b = input("enter length_b")
+length_a = int(length_a)
+length_b = int(length_b)
+length_c = math.sqrt(length_a**2 + length_b**2)
+print(length_c)
+
+Please input the length of two side of the triangle 
+enter length_a3
+enter length_b4
+5.0
+
+2.list_manlger
+x = input("please enter list you want format is 1,2,3,4\n")
+list_mangler = x.split(",")
+list_mangler = [int(list_mangler[i]) for i in range(len(list_mangler))]
+print(list_mangler)
+len(list_mangler)
+print(len(list_mangler))
+length = (len(list_mangler))
+length=int(length)
+if(length%2)==0:
+    newlist = [a * 2 for a in list_mangler]
+else:
+    newlist = [a*3 for a in list_mangler]
+print(newlist)
+    
+please enter list you want format is 1,2,3,4
+1,2,3,4,5
+[1, 2, 3, 4, 5]
+5
+[3, 6, 9, 12, 15]
+
+please enter list you want format is 1,2,3,4
+2,3,4,5
+[2, 3, 4, 5]
+4
+[4, 6, 8, 10]
+
+3.grade_calc
+x = input("please enter grade format is 1,2,3,4\n")
+to_drop = input("please enter the drop time you want")
+droptime = int(to_drop)
+grade_in = x.split(",")
+grade_in = [int(grade_in[i]) for i in range(len(grade_in))]
+i = 1
+while i <= droptime:
+    i +=1
+    grades_in = [x for x in grade_in if x>min(grade_in)]
+print(grades_in)
+s = 0
+for w in grades_in:
+    n = int(w)
+    s += n
+avg = s/len(grades_in)
+print(avg)
+if (avg<60):
+     print('F')
+elif (avg<70):
+     print('D')
+elif (avg<80):
+    print('C')
+elif (avg<90):
+    print('B')
+else:
+    print('A')
+
+please enter grade format is 1,2,3,4
+76,87,68,98
+please enter the drop time you want1
+[76, 87, 98]
+87.0
+B
+
+4.odd_even filter
+x = input("please enter list your number\n")
+list_A = x.split(",")
+list_A = [int(list_A[i]) for i in range(len(list_A))]
+even = []
+odd = []
+for i in list_A:
+    if i % 2 == 0:
+        even.append(i)
+    else:
+        odd.append(i)
+print(even)
+print(odd)
+
+
+please enter list your number
+7,6,5,3,5
+[6]
+[7, 5, 3, 5]
+
