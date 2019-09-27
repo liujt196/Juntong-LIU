@@ -1,0 +1,115 @@
+#1
+x = input("please enter money you have enter five format is 1,2,3,4\n")
+list = x.split(",")
+list = [int(list[i]) for i in range(len(list))]
+list.sort()
+value = list
+sum = 0
+for i in range(0, len(list)):
+    sum += list[i]
+print("The skinniest wallet has $" + str(list[0]) + " in it.")
+print("The fattest wallet has $" + str(list[4]) + " in it")
+print("All together, these wallets have" + str(list) + "in them.")
+print("All together, the total value of these wallets is worth $" + str(sum))
+
+
+#2
+periodic_table = {}
+class element:
+    def __init__(self,sym,name,atom,number,row,colum):
+        self.symbol = sym
+        self.name = name
+        self.atomic = atom
+        self.number = number
+        self.row = row
+        self.column = column
+
+def main_window():
+    print("\n\n")
+    print("choose option you want:\n")
+    print("1. See all the information that is stored about any element, by entering that element's symbol")
+    print("2. Choose a property, and see that property for each element in the table.")
+    print("3. Enter a new element")
+    print("4. Change the attributes of an element, by entering the element's symbol.")
+    print("5.Exit the program")
+
+def checkperiodic_table(element,n):
+    if n == 1 or n == 2:
+        print("symbol   "+ element.symbol)
+    if n == 1 or n == 3:
+        print("name   " + element.name)
+    if n == 1 or n == 4:
+        print("atomic   " + str(element.atomic))
+    if n == 1 or n == 5:
+        print("number   " + str(element.number))
+    if n == 1 or n == 6:
+        print("row   " + str(element.row))
+    if n == 1 or n == 7:
+        print("column   " + str(element.column))
+
+
+while 1:
+    main_window()
+    option = int(input("enter your option\n"))
+    if option == 1:
+        sym = input("enter symbol: ")
+        checkperiodic_table(periodic_table[sym],1)
+    elif option == 2:
+        print("enter property you want to see:\n")
+        print("1. view all symbol\n")
+        print("2. view all name\n")
+        print("3. view all atomic\n")
+        print("4. view all number\n")
+        print("5. view all row\n")
+        print("6. view all column\n")
+        choice = int(input())
+        if choice == 1:
+            for i in periodic_table.keys():
+                checkperiodic_table(periodic_table[i],2)
+        elif choice == 2:
+            for i in periodic_table.keys():
+                checkperiodic_table(periodic_table[i],3)
+        elif chioce == 3:
+            for i in periodic_table.keys():
+                checkperiodic_table(periodic_table[i],4)
+        elif choice == 4:
+            for i in periodic_table.keys():
+                checkperiodic_table(periodic_table[i],5)
+        elif choice == 5:
+            for i in periodic_table.keys():
+                checkperiodic_table(periodic_table[i],6)
+        elif choice == 6:
+            for i in periodic_table.keys():
+                checkperiodic_table(periodic_table[i],7)
+    elif option == 3:
+        sym = input("enter symbol: ")
+        name = input("enter element name: ")
+        atom = int(input("enter atomic number: "))
+        number = int(input("enter element number: "))
+        row = int(input("enter row number: "))
+        column = int(input("enter column number: "))
+
+        if sym not in periodic_table.keys():
+            e = element(sym,name,atom,number,row,column)
+            periodic_table[sym] = e
+            print(sym + "  added\n")
+        else:
+            print(sym + "  already in\n")
+
+    elif option == 4:
+        sym = input("enter symbol: ")
+        name = input("enter element name: ")
+        atom = int(input("enter atomic number: "))
+        number = int(input("enter element number: "))
+        row = int(input("enter row number: "))
+        column = int(input("enter column number: "))
+
+        e = element(sym, name, atom, number, row, column)
+        periodic_table[sym] = e
+        print(sym + "  updated\n")
+    elif option == 5:
+        print("exit")
+        break
+
+
+
