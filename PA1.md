@@ -1,4 +1,4 @@
-#Short destription  
+Short destription  
 I defined four function: get match score, shift sequence1, shift sequence2, store shifted sequence in list
 the get match score function is using a matching_word_count, it is in the loop, when these two sequences have one match word, matching_word_count +1
 the shift function is using a list and then insert "-" to the left or right
@@ -33,11 +33,9 @@ def move_left(lt, n):
 def f(n):
     shiftlist = []
     for i in range(0,n):
-
         if n <= len(dna1):
             shiftlist.append(move_right(dna1,i))
             shiftlist.append(move_left(dna2, i))
-
         else:
             shiftlist.append(move_left(dna1, i))
             shiftlist.append(move_right(dna2, i))
@@ -55,9 +53,6 @@ try:
         get_num(move_right(dna1,i),move_left(dna2,i))
         count += 1
         dict_value.update({count:get_num(move_right(dna1,i),move_left(dna2,i))})
-
-
-
     for i in range(0,len(dna2)):
         move_left(dna1,i)
         move_right(dna2,i)
