@@ -64,14 +64,14 @@ code
     try:
         key_max = max(dict_value, key=dict_value.get)
         a = f(key_max)
+        print("number of matches is " + str(get_num(a[-1],a[-2])))
         print("maximum chain is " + a[-1])
         print("maximum chain is " + a[-2])
-        print("number of matches is " + str(get_num(a[-1],a[-2])))
         if key_max <= len(dna1):
             print("shifting sequence 1 by " + str((key_max) - 1))
         else:
             print("shifting sequence2 by " + str((key_max) - len(dna1) - 1))
-    except(ValueError):
+    except(ValueError,IndexError):
         print("check your input")
 
 
