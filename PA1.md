@@ -3,20 +3,20 @@ I defined four function: get match score, shift sequence1, shift sequence2, stor
 
 code
 
-     dna1 = input("input dna sequence1")
-     f = open('dna1.txt', 'w')
-     f.write(','.join(dna1))
-     dna2 = input("input dna sequence2")
-     s = open('dna2.txt', 'w')
-     s.write(','.join(dna2))
-     def get_num(s1, s2):
-          len_s1 = len(s1)
-          matching_word_count = 0
-          for i in range(len_s1):
-               if s1[i] == s2[i]:
-               matching_word_count = matching_word_count + 1
-          return matching_word_count
-     def move_right(lt, n):
+    dna1 = input("input dna sequence1")
+    f = open('dna1.txt', 'w')
+    f.write(','.join(dna1))
+    dna2 = input("input dna sequence2")
+    s = open('dna2.txt', 'w')
+    s.write(','.join(dna2))
+    def get_num(s1, s2):
+         len_s1 = len(s1)
+         matching_word_count = 0
+         for i in range(len_s1):
+              if s1[i] == s2[i]:
+              matching_word_count = matching_word_count + 1
+         return matching_word_count
+    def move_right(lt, n):
         lt = list(lt)
         for i in range(n % len(lt)):
             lt.insert(0, '-')
