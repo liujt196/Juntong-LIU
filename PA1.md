@@ -2,7 +2,6 @@ Short destription
 I defined four function: get match score, shift sequence1, shift sequence2, store shifted sequence in list the get match score function is using a matching_word_count, it is in the loop, when these two sequences have one match word, matching_word_count +1 the shift function is using a list and then insert "-" to the left or right the store shifted sequence function is using a list to store the shifted sequences in the main program i used a dictionary to store the match store and the loop count, and then sort the max key value by using max(dict_value, key+dict_value.get)   
 
 code
-
      dna1 = input("input dna sequence1")
      f = open('dna1.txt', 'w')
      f.write(','.join(dna1))
@@ -10,12 +9,12 @@ code
      s = open('dna2.txt', 'w')
      s.write(','.join(dna2))
      def get_num(s1, s2):
-     len_s1 = len(s1)
-     matching_word_count = 0
-     for i in range(len_s1):
-        if s1[i] == s2[i]:
-            matching_word_count = matching_word_count + 1
-        return matching_word_count
+          len_s1 = len(s1)
+          matching_word_count = 0
+          for i in range(len_s1):
+               if s1[i] == s2[i]:
+               matching_word_count = matching_word_count + 1
+          return matching_word_count
      def move_right(lt, n):
         lt = list(lt)
         for i in range(n % len(lt)):
