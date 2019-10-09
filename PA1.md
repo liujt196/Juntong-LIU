@@ -14,7 +14,7 @@ code
          matching_word_count = 0
          for i in range(len_s1):
               if s1[i] == s2[i]:
-              matching_word_count = matching_word_count + 1
+                matching_word_count = matching_word_count + 1
          return matching_word_count
     def move_right(lt, n):
         lt = list(lt)
